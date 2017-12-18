@@ -2,7 +2,8 @@
  
 **安装方法**
 
-    cordova plugin add https://gitee.com/huangliop/chameleon-cordova-plugin.git
+    cordova plugin add https://github.com/huangliop/cordova-plugin-chameleon.git
+`如果安装报错，请切换cordova版本到6试试，切换方法：npm uninstall -g cordova ,npm install -g cordova@6`
 
 - Android版本使用说明
 
