@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-foss-chameleon"
+    version="1.2.6"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>ChameleonUtil</name>
+    <js-module name="ChameleonUtil" src="www/util.js">
+        <clobbers target="navigator.ChameleonUtil" /> 
+        <param name="onload" value="true" />
+    </js-module>
+
+    <!-- Android -->
+    <platform name="android">
+		<hook type="after_plugin_install" src="scripts/android/after_plugin_install.js" />
+		<hook type="before_plugin_rm" src="scripts/android/before_plugin_rm.js" />
+		<hook type="after_prepare" src="scripts/android/after_prepare.js" />
+		<hook type="after_build" src="scripts/android/after_build.js" />
+        <source-file src="src/android/ChameleonUtil.java"
+            target-dir="src/com/foreveross/chameleon/cordovaplugin" />  
+        <source-file src="src/android/FileUtil.java"
+            target-dir="src/com/foreveross/chameleon/cordovaplugin" />
+        <source-file src="src/android/InitApp.java"
+            target-dir="src/com/foreveross/chameleon/cordovaplugin" />
+        <source-file src="src/android/UUIDFactory.java"
+            target-dir="src/com/foreveross/chameleon/cordovaplugin" /> 
+        <source-file src="src/android/UtilSharedPreferences.java"
+            target-dir="src/com/foreveross/chameleon/cordovaplugin" />
+        <source-file src="src/android/UnzipTask.java"
+            target-dir="src/com/foreveross/chameleon/cordovaplugin" />
+        <source-file src="src/android/UnzipListener.java"
+            target-dir="src/com/foreveross/chameleon/cordovaplugin" />
+ 
+
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="ChameleonUtil">
+                <param name="android-package"
+                    value="com.foreveross.chameleon.cordovaplugin.ChameleonUtil" />
+            </feature>
+        </config-file> 
+
+    </platform>
+
+     <!-- iOS -->
+    <platform name="ios">
+        <hook type="after_plugin_install" src="scripts/ios/after_plugin_install.js" />
+        <hook type="before_plugin_rm" src="scripts/ios/before_plugin_rm.js" />
+        
+        <header-file src="src/ios/CApplication.h" />
+        <source-file src="src/ios/CApplication.m" />
+        <header-file src="src/ios/ChameleonUtil.h" />
+        <source-file src="src/ios/ChameleonUtil.m" />
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="ChameleonUtil">
+                <param name="ios-package" value="ChameleonUtil" />
+            </feature>
+        </config-file>
+    </platform>
+</plugin>

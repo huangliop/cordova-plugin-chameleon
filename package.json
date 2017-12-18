@@ -1,0 +1,34 @@
+{
+    "name": "chameleon-cordova-plugin",
+    "version": "1.2.6",
+    "description": "在第一次启动应用的时候，把www文件解压到应用专属目录",
+    "cordova": {
+      "id": "cordova-plugin-foss-chameleon",
+      "platforms": [
+        "android",
+        "ios"
+      ]
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://gitee.com/huangliop/chameleon-cordova-plugin.git"
+    }, 
+    "keywords": [
+      "cordova"
+    ],
+    "engines": {
+      "cordovaDependencies": {
+        "2.0.0": {
+          "cordova-android": ">=3.6.0"
+        },
+        "4.0.0": {
+          "cordova-android": ">=3.6.0",
+          "cordova-windows": ">=4.4.0"
+        },
+        "5.0.0": {
+          "cordova": ">100"
+        }
+      }
+    },
+    "author": "Huang li"
+  }
