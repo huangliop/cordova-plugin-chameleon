@@ -1,6 +1,6 @@
 **这个分支是精简一些功能，以让其他项目通用**
  
-**安装方法**
+##安装方法
 
     cordova plugin add https://github.com/huangliop/cordova-plugin-chameleon.git
 `如果安装报错，请切换cordova版本到6试试，切换方法：npm uninstall -g cordova ,npm install -g cordova@6`
@@ -21,8 +21,7 @@
 ```
     loading为图片的名称,且必须是在drawable而不是mipmap下面.
 **在PC上打包时，windonw下需要依赖7z来压缩目录,所以请提前安装7z，并将其可执行文件配置到环境变量中。**
-
-*** 主要功能介绍 ***
+##主要功能介绍
 
     1. removeWebviewCache:清除应用的浏览器缓存,主要应用在更新后,使更新内容被从新加载进浏览器.  
 ```
