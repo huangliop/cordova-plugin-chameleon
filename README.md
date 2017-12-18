@@ -20,10 +20,7 @@
     <preference name="SplashScreen" value="loading" /> 
 ```
     loading为图片的名称,且必须是在drawable而不是mipmap下面.
-
-    **在PC上打包主要事项**
-
-        windonw下需要依赖7z来压缩目录,所以请提前安装7z，并将其可执行文件配置到环境变量中。
+**在PC上打包时，windonw下需要依赖7z来压缩目录,所以请提前安装7z，并将其可执行文件配置到环境变量中。**
 
 *** 主要功能介绍 ***
 
