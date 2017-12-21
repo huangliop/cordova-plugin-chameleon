@@ -25,8 +25,8 @@ module.exports = function (context) {
    
     var modifyMainViewController = function (file) {
         fs.readFile(file, 'utf-8', function (err, data) {
-            // data = data.replace('// _commandDelegate = [[MainCommandDelegate alloc] initWithViewController:self];'
-            //                     , '   _commandDelegate = [[MainCommandDelegate alloc] initWithViewController:self];');
+            data = data.replace('// _commandDelegate = [[MainCommandDelegate alloc] initWithViewController:self];'
+                                , '   _commandDelegate = [[MainCommandDelegate alloc] initWithViewController:self];');
             data = data.replace('return [super pathForResource:resourcepath];'
                                 , 'NSURL* url=[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];\n'
         +'\turl=[[url URLByAppendingPathComponent:@"www" isDirectory:YES] URLByAppendingPathComponent:resourcepath];\n'
